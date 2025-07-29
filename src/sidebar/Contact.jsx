@@ -23,8 +23,8 @@ function Contact({name, imageUrl, alternative }) {
 }
 function Contacts(){
     return(
-        <div className="w-80 h-full ml-2">
-            <div className="flex-col p-3">
+        <div className="w-80  ml-2">
+            <div className="flex-col">
                 <div className="flex w-full">
                     <div className=" flex-3/4">   
                         <h1 className="font-sans font-semibold text-gray-500 ml-2">CONTACTS</h1>
@@ -48,7 +48,7 @@ function Contacts(){
               
             </div>
             <hr />
-            <div className="w-80 h-full mt-5 p-3">
+            <div className="w-80 mt-5">
                 <h1 className="font-sans font-semibold text-gray-500 ml-2 mb-2">Group Chats</h1>
                 <div className="group-list ">
                     <Contact name="Facebook Group" imageUrl="#" alternative="FB"/> 

@@ -5,6 +5,11 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  server:{
+    client: {
+      logLevel: 'error'
+    }
+  },
   plugins: [react(), tailwindcss()],
    resolve: {
     alias: {

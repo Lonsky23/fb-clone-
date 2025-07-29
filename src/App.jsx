@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import ShortcutItem from './sidebar/shortcutItem'
-import ShortcutList from './sidebar/ShortcutList'
+import LeftSideBar from "./layout/LeftSideBar"
+import RightSideBar from "./layout/RightSideBar"
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div >
-          <ShortcutItem />
-          <ShortcutList />
+    <div className="flex w-full justify-between">
+        <LeftSideBar />
+      
+        <RightSideBar/>
+      
     </div>
 
-    
   )
 }
 

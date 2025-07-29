@@ -69,9 +69,9 @@ function Ads({imgURL, header, link}){
         setMore(!more)
     }
 
-    return !close? ( <div className=" relative flex gap-3 items-center w-100 p-3 rounded-xl group hover:bg-gray-300 transition-colors duration-200">
+    return !close? ( <div className=" relative flex gap-3 items-center w-80 p-3 rounded-xl group hover:bg-gray-300 transition-colors duration-200">
                 <img src={imgURL} 
-                alt="" className="w-50 h-50 rounded-2xl object-cover" />
+                alt="" className="w-35 h-35 rounded-2xl object-cover" />
                 <div className="text">
                         <h1 className="header font-semibold font-sans">{header}</h1>
                         <h1 className="link font-sans text-gray-500">{link}</h1>
@@ -100,21 +100,9 @@ function Ads({imgURL, header, link}){
 }
 
 function Advertisement() {
-    const [close, setClose] = useState(false);
-    const [more, setMore] = useState(false);
-
-
-    function handleCloseClick() {
-        setClose(!close);
-    }
-
-    function handleMoreClick(){
-        setMore(!more)
-    }
-
     return (
-        <div className="w-100 flex-col m-0.5 ml-100">
-            <h1 className="text-gray-500 font-bold p-2 ml-2">Sponsored</h1>
+        <div className="w-80 flex-col m-0.5">
+            <h1 className="text-gray-500 font-bold p-2 ml-2 ">Sponsored</h1>
             <Ads imgURL="https://scontent.fmnl4-6.fna.fbcdn.net/v/t45.1600-4/394162912_6521659184488_7413920939893156683_n.png?stp=cp0_dst-jpg_q90_s526x296_spS444_tt6&_nc_cat=111&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeEYxM1kKpacBmrryJKODB9z0xVJIhf2GIzTFUkiF_YYjBxYY8TtGl8XlPAn4ES27cF37OEkBePOKynZ17PHgdEZ&_nc_ohc=sRLFrKB-kP4Q7kNvwFAYmEn&_nc_oc=AdmOse-u0ray55nk-XigcwbZnXsU0vzDeaQ3WmqACd5lunZ-JPn6ZmQALziG9gMX49zj2GMEGVvPrqMrMdd4Z93D&_nc_zt=1&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=V03Jzo-hcmrpuq-8GswW3Q&oh=00_AfQEQkZTUovIHhmrBx74RKHfVo5hV85GxEqqDhPFL-1T8Q&oe=688DDB3E"
             header="Chatgpt: Complete Course for Work" link="chatgpt.com"/>
 
@@ -124,8 +112,6 @@ function Advertisement() {
 
         </div>
     )
-
-
 }
 
 
