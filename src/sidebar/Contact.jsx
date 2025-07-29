@@ -3,7 +3,7 @@ import { Ellipsis, Search } from "lucide-react"
 
 function Contact({name, imageUrl, alternative }) {
     return(
-        <div className="flex gap-3 w-80 items-center p-3 rounded-2xl hover:bg-gray-300 ">
+        <div className="flex gap-3 w-full items-center p-3 rounded-2xl hover:bg-gray-300 ">
             <div className="relative inline-block">
             <Avatar className="w-10 h-10">
                 <AvatarImage src={imageUrl} />
@@ -23,7 +23,7 @@ function Contact({name, imageUrl, alternative }) {
 }
 function Contacts(){
     return(
-        <div className="w-80  ml-2">
+        <div className="w-full  ml-2">
             <div className="flex-col">
                 <div className="flex w-full">
                     <div className=" flex-3/4">   

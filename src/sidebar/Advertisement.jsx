@@ -1,59 +1,62 @@
 import { BookText, FileWarning, Info, MonitorX } from "lucide-react";
 import { useState } from "react"
+import ReactDOM from 'react-dom'
 
 
 
 
 function Popup ({ onclose }) {
-    return (<div className="w-100 absolute top-8 right-22 bg-white shadow-lg z-50 rounded-2xl" onMouseLeave={onclose}>   
-                        {/* hide ad */}
-                        <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
-                            <div className="p-2 flex gap-5">
-                                <div className="flex items-center">
-                                    <MonitorX className="w-7 h-7" />
-                                </div>
-                                <div className="flex-col">
-                                    <h1 className="font-semibold font-sans">Hide ad</h1>
-                                    <p className="text-sm font-sans text-gray-500">Never see this ad again</p>
-                                </div>
-                            </div>
+    return(
+        <div className="w-100 absolute top-8 right-22 bg-white shadow-lg z-50 rounded-2xl" onMouseLeave={onclose}>   
+                {/* hide ad */}
+                <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
+                    <div className="p-2 flex gap-5">
+                        <div className="flex items-center">
+                            <MonitorX className="w-7 h-7" />
                         </div>
-                        {/* Report ad */}
-                         <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
-                            <div className="p-2 flex gap-5">
-                                <div className="flex items-center">
-                                    <FileWarning className="w-7 h-7" />
-                                </div>
-                                <div className="flex-col">
-                                    <h1 className="font-semibold font-sans">Report ad</h1>
-                                    <p className="text-sm font-sans text-gray-500">Tell us about a problem with this ad</p>
-                                </div>
-                            </div>
+                        <div className="flex-col">
+                            <h1 className="font-semibold font-sans">Hide ad</h1>
+                            <p className="text-sm font-sans text-gray-500">Never see this ad again</p>
                         </div>
-                        {/* Why */}
-                        <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
-                            <div className="p-2 flex gap-5">
-                                <div className="flex items-center">
-                                    <Info className="w-7 h-7" />
-                                </div>
-                                <div className="flex-col">
-                                    <h1 className="font-semibold font-sans">Why I am seeing this ad?</h1>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                {/* Report ad */}
+                    <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
+                    <div className="p-2 flex gap-5">
+                        <div className="flex items-center">
+                            <FileWarning className="w-7 h-7" />
                         </div>
-                        {/* Info */}
-                         <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
-                            <div className="p-2 flex gap-5">
-                                <div className="flex items-center">
-                                    <BookText className="w-7 h-7" />
-                                </div>
-                                <div className="flex-col">
-                                    <h1 className="font-semibold font-sans">Ad Info</h1>
-                                </div>
-                            </div>
+                        <div className="flex-col">
+                            <h1 className="font-semibold font-sans">Report ad</h1>
+                            <p className="text-sm font-sans text-gray-500">Tell us about a problem with this ad</p>
                         </div>
+                    </div>
+                </div>
+                {/* Why */}
+                <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
+                    <div className="p-2 flex gap-5">
+                        <div className="flex items-center">
+                            <Info className="w-7 h-7" />
+                        </div>
+                        <div className="flex-col">
+                            <h1 className="font-semibold font-sans">Why I am seeing this ad?</h1>
+                        </div>
+                    </div>
+                </div>
+                {/* Info */}
+                    <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
+                    <div className="p-2 flex gap-5">
+                        <div className="flex items-center">
+                            <BookText className="w-7 h-7" />
+                        </div>
+                        <div className="flex-col">
+                            <h1 className="font-semibold font-sans">Ad Info</h1>
+                        </div>
+                    </div>
+                </div>
 
-                    </div>)
+            </div>          
+            )
 }
 
 
@@ -69,7 +72,7 @@ function Ads({imgURL, header, link}){
         setMore(!more)
     }
 
-    return !close? ( <div className=" relative flex gap-3 items-center w-80 p-3 rounded-xl group hover:bg-gray-300 transition-colors duration-200">
+    return !close? ( <div className=" relative flex gap-3 items-center w-full p-3 rounded-xl group hover:bg-gray-300 transition-colors duration-200">
                 <img src={imgURL} 
                 alt="" className="w-35 h-35 rounded-2xl object-cover" />
                 <div className="text">
@@ -101,7 +104,7 @@ function Ads({imgURL, header, link}){
 
 function Advertisement() {
     return (
-        <div className="w-80 flex-col m-0.5">
+        <div className="w-full flex-col m-0.5">
             <h1 className="text-gray-500 font-bold p-2 ml-2 ">Sponsored</h1>
             <Ads imgURL="https://scontent.fmnl4-6.fna.fbcdn.net/v/t45.1600-4/394162912_6521659184488_7413920939893156683_n.png?stp=cp0_dst-jpg_q90_s526x296_spS444_tt6&_nc_cat=111&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeEYxM1kKpacBmrryJKODB9z0xVJIhf2GIzTFUkiF_YYjBxYY8TtGl8XlPAn4ES27cF37OEkBePOKynZ17PHgdEZ&_nc_ohc=sRLFrKB-kP4Q7kNvwFAYmEn&_nc_oc=AdmOse-u0ray55nk-XigcwbZnXsU0vzDeaQ3WmqACd5lunZ-JPn6ZmQALziG9gMX49zj2GMEGVvPrqMrMdd4Z93D&_nc_zt=1&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=V03Jzo-hcmrpuq-8GswW3Q&oh=00_AfQEQkZTUovIHhmrBx74RKHfVo5hV85GxEqqDhPFL-1T8Q&oe=688DDB3E"
             header="Chatgpt: Complete Course for Work" link="chatgpt.com"/>

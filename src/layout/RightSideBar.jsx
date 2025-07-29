@@ -4,7 +4,7 @@ import Contacts from "@/sidebar/Contact"
 
 function RightSideBar() {
     return(
-        <div className="flex flex-col w-fit h-screen overflow-y-auto overflow-x-hidden">
+        <div className="flex flex-col w-100 h-screen overflow-y-auto">
             <Advertisement />
             <Birthdays />
             <Contacts />
