@@ -3,7 +3,7 @@ import { House, Search, Store, TvMinimalPlay, Users, Gamepad, Menu, MessageCircl
 
 function NavbarButtons() {
     return(
-        <div className="h-full flex gap-1 mr-40">
+        <div className="h-full w-full flex justify-center gap-1">
             <div className="w-30 h-full border-b-3 border-blue-500 ">
                 <button className=" w-full h-full rounded-2xl flex justify-center items-center">
                     <House className="w-6 h-6 text-blue-500 "/>
@@ -36,7 +36,7 @@ function NavbarButtons() {
 
 function NavbarCircleButtons() {
     return(
-        <div className="w-full h-full flex items-center px-2 gap-3 me-3.5">
+        <div className="w-full h-full flex items-center justify-end px-2 gap-3 mr-2">
             <div className="bg-gray-300 rounded-full h-fit w-fit p-2">
                 <Menu />
             </div>
@@ -57,8 +57,8 @@ function NavbarCircleButtons() {
 
 function Navbar() {
     return(
-    <div className="shadow-md w-full flex h-15 justify-between sticky">
-        <div className="flex h-full gap-2 pt-2 ps-3">
+    <div className="shadow-md w-full flex h-15 sticky">
+        <div className="flex h-full gap-2 pt-2 ps-3 flex-1/4">
             <div className="image w-fit ">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" 
                 alt="" className="w-10 h-10" />
@@ -75,11 +75,11 @@ function Navbar() {
             </div>
         </div>
 
-        <div className="h-full">
+        <div className="h-full flex-3/4 flex justify-center">
             <NavbarButtons/>
         </div>
 
-        <div className="h-full w-fit">
+        <div className="h-full w-fit flex-1/4   ">
             <NavbarCircleButtons/>
         </div>
         
