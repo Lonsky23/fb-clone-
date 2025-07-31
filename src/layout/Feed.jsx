@@ -1,10 +1,10 @@
 import CreatePost from "@/Feed/Create"
 import Stories from "@/Feed/Stories"
-import Post from "@/Feed/Post"
+import Posts from "@/Feed/Post"
 
 function Feed() {
     return(
-        <div className="w-full">
+        <div className="w-full h-full overflow-y-scroll">
             <div className="mt-5">
                 <CreatePost />
             </div>
@@ -12,7 +12,7 @@ function Feed() {
                 <Stories /> 
             </div>
             <div className="h-full w-full mt-3">
-                <Post/>
+                <Posts/>
             </div>
 
             

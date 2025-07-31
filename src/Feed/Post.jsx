@@ -1,18 +1,23 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Ellipsis, Forward, MessageCircle, ThumbsUp, X } from "lucide-react"
-
-function Post(){
+const user = {
+    "dpUrl":" https://imgcdn.stablediffusionweb.com/2024/3/12/91f69dac-3c3e-4bdc-93c3-fa8a3aa912d5.jpg",
+    "userName" : "Facebook user"
+}
+const content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna temporPulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+const imageUrl = "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg"
+function Post({profileURL,user, dateTime, content, imgUrl}){
     return(
-        <div className="w-full h-fit rounded-xl shadow-[0_0_10px_0_rgba(0,0,0,0.1)] p-2">
+        <div className="w-full h-fit rounded-xl shadow-[0_0_10px_0_rgba(0,0,0,0.1)] p-2 mb-5">
             <div className="profile p-3 flex items-center justify-between">
                 <div className="flex gap-2 items-center">
                      <Avatar className="h-10 w-10">
-                    <AvatarImage src="https://imgcdn.stablediffusionweb.com/2024/3/12/91f69dac-3c3e-4bdc-93c3-fa8a3aa912d5.jpg"/>
+                    <AvatarImage src={profileURL}/>
                     <AvatarFallback >FB</AvatarFallback>
                     </Avatar>
                     <div className="">
-                        <h1 className="font-sans font-semibold">Facebook User</h1>
-                        <h1 className="font-sant text-sm text-gray-600 font-semibold">Yesterday</h1>
+                        <h1 className="font-sans font-semibold">{user}</h1>
+                        <h1 className="font-sant text-sm text-gray-600 font-semibold">{dateTime}</h1>
                     </div>
                 </div>
                 <div className="flex gap-3 mr-2">
@@ -22,12 +27,15 @@ function Post(){
             </div>
             <div className="px-3 pb-3">
                 <p className="font-sans text-md ">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. 
-                    In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
-                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc 
-                    posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+                    {content}
                 </p>
             </div>
+            {imgUrl && 
+            <div className="picture storage mb-2 h-100 border py-1">
+                <img src={imgUrl} 
+                alt="" className="w-full h-full "/>
+            </div>
+            }
             <div className="px-3 flex justify-between pb-2">
                 <div className="flex gap-3 items-center">
                     <ThumbsUp className="h-5 w-5"/>
@@ -55,4 +63,14 @@ function Post(){
     )
 }
 
-export default Post
+function Posts() {
+    return(
+        <div className="w-full h-full">
+            <Post profileURL={user.dpUrl} user={user.userName} dateTime="yesterday" content={content} />
+            <Post profileURL={user.dpUrl} user={user.userName}  dateTime="yesterday" content={content} imgUrl={imageUrl} />
+        </div>
+    )
+
+}
+
+export default Posts

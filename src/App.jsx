@@ -12,7 +12,7 @@ function App() {
         <div className="flex-1/4">
           <LeftSideBar />
         </div>
-        <div className="flex-3/4 mx-52">
+        <div className="flex-3/4 mx-52 ">
           <Feed />
         </div> 
         <div className="flex-1/4 z-50">
