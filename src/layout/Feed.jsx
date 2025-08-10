@@ -4,14 +4,14 @@ import Posts from "@/Feed/Post"
 
 function Feed() {
     return(
-        <div className="w-full">
+        <div className="w-full relative">
             <div className="mt-5">
                 <CreatePost />
             </div>
-            <div className="h-50 mt-4">
+            <div className="mt-4">
                 <Stories /> 
             </div>
-            <div className="w-full mt-3">
+            <div className="w-full mt-3 ">
                 <Posts/>
             </div>
 

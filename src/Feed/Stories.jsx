@@ -1,17 +1,22 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 function Story({imgUrl, profileImage, name}){
-    return(
-        <div className="w-35 h-full object-cover relative">
-            <Avatar className="h-10 w-10 ring-2 ring-blue-500 absolute left-3 top-4">
-                <AvatarImage src={profileImage}/>
-                <AvatarFallback >FB</AvatarFallback>
-            </Avatar>
-            <img src={imgUrl}
-            alt="" className="object-cover h-full rounded-2xl" />
-            <h1 className="font-sans font-semibold absolute bottom-2 left-2 text-white text-md">{name}</h1>
-        </div>
-    )
+   return (
+    <div className="relative w-36 h-full flex-shrink-0">
+      <Avatar className="h-10 w-10 ring-2 ring-blue-500 absolute left-3 top-4">
+        <AvatarImage src={profileImage} />
+        <AvatarFallback>FB</AvatarFallback>
+      </Avatar>
+      <img
+        src={imgUrl}
+        alt=""
+        className="object-cover w-full h-full rounded-2xl"
+      />
+      <h1 className="font-sans font-semibold absolute bottom-2 left-2 text-white text-md">
+        {name}
+      </h1>
+    </div>
+  );
 }
 
 
