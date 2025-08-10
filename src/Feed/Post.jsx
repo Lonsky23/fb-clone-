@@ -65,7 +65,7 @@ function Post({profileURL,user, dateTime, content, imgUrl}){
 
 function Posts() {
     return(
-        <div className="w-full h-full">
+        <div className="w-full">
             <Post profileURL={user.dpUrl} user={user.userName} dateTime="yesterday" content={content} />
             <Post profileURL={user.dpUrl} user={user.userName}  dateTime="yesterday" content={content} imgUrl={imageUrl} />
         </div>

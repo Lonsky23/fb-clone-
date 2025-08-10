@@ -57,8 +57,8 @@ function NavbarCircleButtons() {
 
 function Navbar() {
     return(
-    <div className="shadow-md w-full flex h-15 sticky">
-        <div className="flex h-full gap-2 pt-2 ps-3 flex-1/4">
+    <div className="shadow-md w-full flex h-18 sticky top-0 bg-white z-50">
+        <div className="flex h-full gap-2 pt-2 ps-3 flex-1/4 pb-2">
             <div className="image w-fit ">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" 
                 alt="" className="w-10 h-10" />
