@@ -4,7 +4,7 @@ import Posts from "@/Feed/Post"
 
 function Feed() {
     return(
-        <div className="w-full relative ">
+        <div className="w-[650px] relative ">
             <div className="mt-5">
                 <CreatePost />
             </div>

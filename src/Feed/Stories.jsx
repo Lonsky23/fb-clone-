@@ -72,9 +72,6 @@ function Stories() {
   ];
 
 
-    const start = page * size
-    const visible = stories.slice(start, start + size)
-
 
 
   const handleNext = () => {
@@ -94,21 +91,27 @@ function Stories() {
   }
 
     return(
-        <div className="h-50 flex w-full relative">
+        <div className="h-50 flex w-full relative overflow-hidden">
             <div className="bg-white rounded-full absolute left-3 top-20 z-50 hover:bg-[#F2F2F2] cursor-pointer flex justify-center">
               <button onClick={handlePrevious} className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"> 
                 <ChevronLeft/>
               </button>
             </div>
-            <div className="w-full flex gap-2">
-            {visible.map((story,index) => (
-              <Story 
-              key={index}
-              imgUrl={story.imgUrl} 
-              profileImage={story.profileImage}
-              name={story.name}/>
-            ))}
+           <div
+              className="flex transition-transform duration-500 ease-in-out w-full gap-x-5"
+              style={{ transform: `translateX(-${page * 80}%)` }}
+            >
+              {stories.map((story, index) => (
+                <div key={index} className="w-1/5 flex-shrink-0 px-1">
+                  <Story
+                    imgUrl={story.imgUrl}
+                    profileImage={story.profileImage}
+                    name={story.name}
+                  />
+                </div>
+              ))}
             </div>
+
            
           <div className="bg-white rounded-full absolute right-3 top-20 z-50 hover:bg-[#F2F2F2] flex justify-center items-center">
             <button onClick={handleNext} className="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center">
