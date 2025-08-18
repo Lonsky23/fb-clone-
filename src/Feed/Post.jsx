@@ -48,14 +48,14 @@ function Post({profileURL,user, dateTime, content, imgUrl}){
                 </div>
             </div>
             <hr />
-            <div className="w-full h-10 flex mx-2 mt-2">
+            <div className="h-10 flex mx-2 mt-2">
                 <button className="flex gap-2 flex-1 justify-center items-center text-gray-600 rounded-xl hover:bg-gray-100 ">
                     <ThumbsUp className="text-gray-600 h-5 w-5"/> Like
                 </button>
-                <button className="flex gap-2 flex-1 justify-center items-center text-gray-600  hover:bg-gray-100 ">
+                <button className="flex gap-2 flex-1 justify-center items-center text-gray-600 rounded-xl hover:bg-gray-100 ">
                     <MessageCircle className="text-gray-600 h-5 w-5"/> Comment
                 </button>
-                <button className="flex gap-2 flex-1 justify-center items-center text-gray-600  hover:bg-gray-100 ">
+                <button className="flex gap-2 flex-1 justify-center items-center text-gray-600 rounded-xl hover:bg-gray-100 ">
                     <Forward className="text-gray-600h-5 w-5"/> Share
                 </button>
             </div>

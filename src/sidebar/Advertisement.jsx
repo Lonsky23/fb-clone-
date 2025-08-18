@@ -106,10 +106,10 @@ function Advertisement() {
     return (
         <div className="w-full flex-col m-0.5">
             <h1 className="text-gray-500 font-bold p-2 ml-2 ">Sponsored</h1>
-            <Ads imgURL="https://scontent.fmnl4-6.fna.fbcdn.net/v/t45.1600-4/394162912_6521659184488_7413920939893156683_n.png?stp=cp0_dst-jpg_q90_s526x296_spS444_tt6&_nc_cat=111&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeEYxM1kKpacBmrryJKODB9z0xVJIhf2GIzTFUkiF_YYjBxYY8TtGl8XlPAn4ES27cF37OEkBePOKynZ17PHgdEZ&_nc_ohc=sRLFrKB-kP4Q7kNvwFAYmEn&_nc_oc=AdmOse-u0ray55nk-XigcwbZnXsU0vzDeaQ3WmqACd5lunZ-JPn6ZmQALziG9gMX49zj2GMEGVvPrqMrMdd4Z93D&_nc_zt=1&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=V03Jzo-hcmrpuq-8GswW3Q&oh=00_AfQEQkZTUovIHhmrBx74RKHfVo5hV85GxEqqDhPFL-1T8Q&oe=688DDB3E"
-            header="Chatgpt: Complete Course for Work" link="chatgpt.com"/>
+            <Ads imgURL="https://scontent.fmnl4-6.fna.fbcdn.net/v/t45.1600-4/469439963_120214246843910702_1492381652024805220_n.png?stp=cp0_dst-jpg_q90_s526x296_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeGBe9Am6oEKFrvHkDr4KEvQz7emaE9s3wrPt6ZoT2zfCqkIx78hV9E8QW4xEx6zO0Pbq51XljxGBPXOrnQzN01D&_nc_ohc=lWGFQWxyWYoQ7kNvwH96G06&_nc_oc=Adlk2qAltYQuS8WYehK47pp38QY5RhIG5dot0-_hE7hQ7VUzbkLcCxBCvTDT5824LBa_ZbSRDjej0aNIBodvXET8&_nc_zt=1&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=4m3erNVB9D79p3UBrq_cMw&oh=00_AfWpQdb9bKuvTjS74DR9UglHEbZInJNN_InclKMSMNCLUQ&oe=68A90107"
+            header="Be a Better Writer, Starting Today" link="grammarly.com"/>
 
-            <Ads imgURL="https://scontent.fmnl4-6.fna.fbcdn.net/v/t45.1600-4/462686053_6639343286542_523746398576203945_n.png?stp=cp0_dst-jpg_p296x100_q90_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeH13wseZppQbZgIXKDKS1xVAxrAwhhmf5MDGsDCGGZ_k22AwbOIF23deHRuHN0efkSvlP5EbasDVRXuPyDslqRo&_nc_ohc=flif_qi71scQ7kNvwGGsSjj&_nc_oc=AdlTRWm5W75CskMtebzBMuFxSSE8sS_B4u8jOieBB9VhmJ0kOVtGpjb5iJU7kRqjM-2oipZ23kWzFSrWj_hQpsTb&_nc_zt=1&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=V03Jzo-hcmrpuq-8GswW3Q&oh=00_AfQwsUGIk9F57VxsHqkQ82RqdEuBxBcw3iB4j5WEz3bZTg&oe=688DFB59"
+            <Ads imgURL="https://scontent.fmnl4-6.fna.fbcdn.net/v/t45.1600-4/530833302_1954591895338731_5239426731796527508_n.png?stp=cp0_dst-jpg_q90_s526x296_spS444_tt6&_nc_cat=1&ccb=1-7&_nc_sid=c02adf&_nc_eui2=AeFC8oRcHQrK6sDIYOubP4GADmxQ0MGu6QIObFDQwa7pAj51i9aV7rEK3HICKKRsMgw1XOgEVZeRx0N4ZZRJNMsh&_nc_ohc=m30zn_Ry0NUQ7kNvwGFHZtg&_nc_oc=AdmPgfsi3U-D19RsztZUy16AJZjZRE1J-x3oOkgmoqxsE9aQO-PKm8-8JYHrR-Q-d1wFGn6wqz4DGDkzT0iwCNWq&_nc_zt=1&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=4m3erNVB9D79p3UBrq_cMw&oh=00_AfV_tEdD1P16REOVhPB0OLXetznIy3DsTHZCdKBcG0EUtA&oe=68A8DBDA"
             header="Try the free MongoDB Atlas Demo" link="mongodb.com" />
             
 
