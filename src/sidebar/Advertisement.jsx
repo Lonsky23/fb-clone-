@@ -1,13 +1,17 @@
 import { BookText, FileWarning, Info, MonitorX } from "lucide-react";
 import { useState } from "react"
-import ReactDOM from 'react-dom'
+import { createPortal } from "react-dom";
 
 
 
 
-function Popup ({ onclose }) {
-    return(
-        <div className="w-100 absolute top-8 right-22 bg-white shadow-lg z-50 rounded-2xl" onMouseLeave={onclose}>   
+
+function Popup ({ onclose, pos }) {
+    return createPortal(
+        <div className="w-100 absolute top-8 right-22 bg-white shadow-lg z-50 rounded-2xl" onMouseLeave={onclose}
+        style={{position: "fixed",
+                top : pos.top,
+        }}>   
                 {/* hide ad */}
                 <div className="p-2 group rounded-2xl hover:bg-gray-200 transition-colors duration-200">
                     <div className="p-2 flex gap-5">
@@ -55,7 +59,8 @@ function Popup ({ onclose }) {
                     </div>
                 </div>
 
-            </div>          
+            </div>,
+            document.body   
             )
 }
 
@@ -63,14 +68,20 @@ function Popup ({ onclose }) {
 function Ads({imgURL, header, link}){
     const [close, setClose] = useState(false);
     const [more, setMore] = useState(false);
+    const [popupPos, setPopupPos] = useState(null);
 
     function handleCloseClick() {
         setClose(!close);
     }
 
-    function handleMoreClick(){
-        setMore(!more)
-    }
+  
+  function handleMoreClick(e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setPopupPos({
+      top: rect.bottom + 5,
+    });
+    setMore(!more);
+  }
 
     return !close? ( <div className=" relative flex gap-3 items-center w-full p-3 rounded-xl group hover:bg-gray-300 transition-colors duration-200">
                 <img src={imgURL} 
@@ -85,7 +96,10 @@ function Ads({imgURL, header, link}){
                 <div className="bg-gray-400 p-2 w-8 h-8 rounded-full absolute top-3 right-15  justify-center items-center
                 hidden group-hover:flex  cursor-pointer transition-colors duration-300">
                     <button className="w-full h-full relative flex justify-center items-center mb-2" onClick={handleMoreClick}>...</button></div>
-                    {more ? <Popup onclose={handleMoreClick}/> : <></>}
+                    {more && popupPos ? (
+                        <Popup onclose={handleMoreClick} pos={popupPos} />
+                        ) : null}
+
                    
             </div>) : (
             <div className="flex w-100 p-3">

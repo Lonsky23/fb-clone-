@@ -3,7 +3,7 @@ import ShortcutList from "@/sidebar/ShortcutList"
 
 function LeftSideBar(){
     return(
-        <div className="w-full">
+        <div className="w-100">
             <ShortcutItem />
             <hr className="border"/>
             <ShortcutList />

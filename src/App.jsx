@@ -10,16 +10,16 @@ function App() {
       <Navbar />
 
       <div className="flex justify-between">
-        <div className="w-1/4">
+        <div className="w-full ">
           <div className="sticky top-16">
             <LeftSideBar />
           </div>
         </div>
 
-        <div className="flex-1 mx-52">
+        <div className="w-full ">
           <Feed />
         </div>
-        <div className="w-1/4">
+        <div className="w-full  flex justify-end">
           <div   className="sticky top-16 h-[calc(100vh-4rem)] overflow-y-hidden hover:overflow-y-auto transition-opacity duration-1000 overflow-x-hidden custom-scrollbar">
             <RightSideBar />
           </div>
